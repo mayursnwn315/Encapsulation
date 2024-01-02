@@ -1,0 +1,94 @@
+﻿1. What is encapsulation in Java? Why is it called Data hiding?
+
+
+Ans:Encapsulation in Java: Encapsulation is the bundling of data (attributes) and the methods that operate on the data into a single unit, known as a class. It restricts direct access to some of the object's components, promoting information hiding and abstraction.
+Data Hiding: Encapsulation is often called data hiding because it hides the internal state (data) of an object from the outside world. The details of how data is stored and manipulated are hidden within the class, and only the necessary functionalities are exposed.
+
+
+2.What are the important features of encapsulation?
+
+
+Ans:Access Modifiers: Encapsulation uses access modifiers (e.g., private, public, protected) to control the visibility of fields and methods.
+Data Protection: Encapsulation protects the internal state of an object by allowing controlled access to its attributes through methods.
+Abstraction: It provides a level of abstraction by exposing only essential functionalities and hiding the implementation details.
+
+
+3.What are getter and setter in Java? Explain with an example.
+
+
+Ans:Getter: A getter is a method used to retrieve the value of a private field. It provides read access to the encapsulated data.
+Setter: A setter is a method used to set the value of a private field. It provides write access to the encapsulated data.
+Example:
+java
+Copy code
+public class Example {
+    private int age;
+
+
+    // Getter
+    public int getAge() {
+        return age;
+    }
+
+
+    // Setter
+    public void setAge(int newAge) {
+        if (newAge > 0) {
+            age = newAge;
+        }
+    }
+}
+
+
+4.What is the use of the "this" keyword? Explain with an example.
+
+
+Ans:
+"this" Keyword: In Java, "this" refers to the current instance of the class. It is used to differentiate between instance variables and parameters with the same name.
+Example:
+java
+Copy code
+public class Person {
+    private String name;
+
+
+    // Constructor with parameter and "this" keyword
+    public Person(String name) {
+        this.name = name; // Assigning the parameter 'name' to the instance variable 'this.name'
+    }
+}
+
+
+5.What is the advantage of encapsulation?
+Ans:
+Advantages:
+Data Protection: Encapsulation hides the internal state of an object, preventing unauthorized access and modification.
+Abstraction: It exposes only essential functionalities, reducing complexity and providing a clear interface.
+Modularity: Encapsulation promotes modularity by encapsulating related functionalities within a class.
+
+
+6.How to achieve encapsulation in Java? Give an example?
+Ans:
+Achieving Encapsulation:
+Declare fields as private.
+Provide public getter and setter methods for controlled access.
+Example:
+java
+Copy code
+public class BankAccount {
+    private double balance;
+
+
+    // Getter
+    public double getBalance() {
+        return balance;
+    }
+
+
+    // Setter
+    public void setBalance(double newBalance) {
+        if (newBalance >= 0) {
+            balance = newBalance;
+        }
+    }
+}
